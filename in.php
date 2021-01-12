@@ -42,6 +42,7 @@ function getPrice($pizzaType){
 		default :
 			return 'On its Way to you !!!';
 	}
+	return 20;
 }
 
 //Calling function with pizza type and the customer.
