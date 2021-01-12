@@ -21,7 +21,7 @@ function getAdress($customer){
 			return 'a yacht in Antwerp';
 		case 'manuele':
 			return 'Somewhere in Belgium';
-		case 'students of Verou 1.26' : 
+		case 'students' : 
 			return 'BeCode Office';
 		default :
 		 	return 'unknown Error wing said it ';
@@ -49,7 +49,7 @@ function getPrice($pizzaType){
 function order(){
 	getPizza('calzone','koen');
 	getPizza('marguerita','manuele');
-	getPizza('golden','students ');
+	getPizza('golden','students');
 };
 
 //Invoking the order().
