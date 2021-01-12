@@ -1,16 +1,20 @@
 <?php
 
-function getPizza ($pizzaType,$customer){
-	$Customer = ucfirst($customer);
-    $Adress = getAdress($customer);
-    $Price = getPrice($pizzaType);	
-
-	echo 'Making  a  new order..!!!.<br>';
+//Printing the required output.
+function getPizza($pizzaType,$customer){
+    $Customer = ucfirst($customer); //Getting customer name.
+    $Adress = getAdress($customer); //Getting customer address.
+    $Price = getPrice($pizzaType); //Getting the pizza cost.
+	
+    //Required output:
+    echo 'Making  a  new order..!!!.<br>';
     echo "A  delicious{$pizzaType} pizza should be sent to {$Customer} <br>";
     echo "The adress: {$Adress}<br>";
     echo "The bill is €{$Price}<br>";
     echo "Order finished.<br><br>";
 }
+
+//Selecting and returning the address.Depending on the customer name from order(), address is returned.
 function getAdress($customer){
 	switch ($customer){
 		case 'koen' :
@@ -23,7 +27,9 @@ function getAdress($customer){
 		 	return 'unknown Error wing said it ';
 	}
 }
-function getPrice ($pizzaType){
+
+//Selecting and returning the pizza type with cost. Depending on the pizza type from order(), cost is returned.
+function getPrice($pizzaType){
 	switch($pizzaType ){
 		case'marguerita' :
 			return '5';
@@ -34,26 +40,17 @@ function getPrice ($pizzaType){
 		case 'hawai':
 			throw new Exception('No pineapple on pizza allowed !!!!');
 		default :
-		return 'On its Way to you !!!';
+			return 'On its Way to you !!!';
 	}
 }
-function order (){
-getPizza('calzone','koen');
-getPizza('marguerita','manuele');
-getPizza('golden','students ');
+
+//Calling function with pizza type and the customer.
+function order(){
+	getPizza('calzone','koen');
+	getPizza('marguerita','manuele');
+	getPizza('golden','students ');
 };
+
+//Invoking the order().
 order ();
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
