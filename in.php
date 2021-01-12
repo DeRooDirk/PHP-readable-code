@@ -73,7 +73,7 @@ function order(){
 	getPizza('marguerita','manuele');
 	getPizza('golden','students');
 	getPizza('hawai','bert');
-    	getPizza('','');
+    getPizza('','');
 };
 
 //Invoking the order().
