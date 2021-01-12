@@ -6,7 +6,7 @@ function getPizza($pizzaType,$customer){
     $Adress = getAdress($customer); //Getting customer address.
     $Price = getPrice($pizzaType); //Getting the pizza cost.
 	
-    //Required output:
+    //Required output format:
     echo 'Making  a  new order..!!!.<br>';
     echo "A  delicious{$pizzaType} pizza should be sent to {$Customer} <br>";
     echo "The adress: {$Adress}<br>";
