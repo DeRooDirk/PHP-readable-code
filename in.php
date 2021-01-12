@@ -23,9 +23,21 @@ function getAdress($customer){
 			return 'Somewhere in Belgium';
 		case 'students' : 
 			return 'BeCode Office';
+		case 'bert' :
+            		try{
+                		echo 'No pizza for you Bert!!!!<br>';
+                		throw new Exception();
+            		}catch(Exception $e){
+                		echo 'Banana on Pizza is allowed!!!<br>';
+            		}
+            		finally{
+                		echo 'Thank you!<br>';
+           		}
+            		break;
 		default :
 		 	return 'unknown Error wing said it ';
-	}
+    }
+    return 'BeCode is my home';
 }
 
 //Selecting and returning the pizza type with cost. Depending on the pizza type from order(), cost is returned.
@@ -38,11 +50,21 @@ function getPrice($pizzaType){
 		case 'calzone':
 			return'10';
 		case 'hawai':
-			throw new Exception('No pineapple on pizza allowed !!!!');
+			try{
+                		echo 'No pineapple on pizza allowed !!!!<br>';
+                		throw new Exception();
+            		}catch(Exception $e){
+                		echo 'Not allowed!<br>';
+            		}
+            		finally{
+                		echo 'Please choose a proper combination<br>';
+                		echo '<br>';
+            		}
+            		break;
 		default :
 			return 'On its Way to you !!!';
-	}
-	return 20;
+    }
+    return '0';
 }
 
 //Calling function with pizza type and the customer.
@@ -50,6 +72,8 @@ function order(){
 	getPizza('calzone','koen');
 	getPizza('marguerita','manuele');
 	getPizza('golden','students');
+	getPizza('hawai','bert');
+    	getPizza('','');
 };
 
 //Invoking the order().
