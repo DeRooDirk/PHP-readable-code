@@ -13,11 +13,11 @@ function getPizza ($pizzaType,$customer){
 }
 function getAdress($customer){
 	switch ($customer){
-		case 'Koen' :
+		case 'koen' :
 			return 'a yacht in Antwerp';
-		case 'Manuele':
+		case 'manuele':
 			return 'Somewhere in Belgium';
-		case 'Students of Verou 1.26' : 
+		case 'students of Verou 1.26' : 
 			return 'BeCode Office';
 		default :
 		 	return 'unknown Error wing said it ';
@@ -38,9 +38,9 @@ function getPrice ($pizzaType){
 	}
 }
 function order (){
-getPizza('calzone','Koen');
-getPizza('marguerita','Manuele');
-getPizza('golden','Students ');
+getPizza('calzone','koen');
+getPizza('marguerita','manuele');
+getPizza('golden','students ');
 };
 order ();
 
